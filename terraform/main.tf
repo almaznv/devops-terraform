@@ -49,8 +49,8 @@ resource "aws_instance" "web" {
 resource "aws_instance" "cache" {
   for_each = local.envs[terraform.workspace]
 
-  ami           = each.key
-  instance_type = each.value
+  ami           = each.value
+  instance_type = each.key
   availability_zone = "eu-central-1a"
 
 }
