@@ -1,0 +1,11 @@
+.idea/
+secrets.tfvars
+.terraform
+.terraform.lock.hcl
+terraform.tfstate
+*.tfstate.backup
+*.terraform*
+cloud-config.yml
+cloud-key.json
+provider.tf
+secret/
