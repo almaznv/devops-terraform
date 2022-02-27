@@ -44,9 +44,6 @@ resource "aws_instance" "web" {
   instance_type = local.web_instance_type_map[terraform.workspace]
   availability_zone = "eu-central-1a"
 
-  lifecycle {
-     create_before_destroy = true
-  }
 }
 
 resource "aws_instance" "cache" {
