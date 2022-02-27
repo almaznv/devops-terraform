@@ -17,8 +17,8 @@ data "aws_ami" "ubuntu" {
 
 locals {
   web_instance_type_map = {
-   stage = "t3.micro"
-   prod = "t3.large"
+   stage = "t2.micro"
+   prod = "t2.large"
   }
   web_instance_count_map = {
    stage = 1
@@ -26,7 +26,7 @@ locals {
   }
   envs = {
     stage = {
-     "t3.micro" = data.aws_ami.ubuntu.id
+     "t2.micro" = data.aws_ami.ubuntu.id
     }
     prod = {
      "t3.micro" = data.aws_ami.ubuntu.id
